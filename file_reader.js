@@ -9,9 +9,9 @@ fs.readFile("./firstname.txt", "utf-8", (err, data1) => {
       const word3 = data3;
       fs.readFile("./hobbies.txt", "utf-8", (err, data4) => {
         const arrayTostr = data4.replace(/[\[\]"]/g, "");
-        const word4 = arrayTostr.trim().split(",");
+        const word4 = arrayTostr.trim().split(", ");
         console.log(
-          `${word1} ${word2} is ${word3} years old and his hobbies are ${word4[0]} and${word4[1]}`
+          `${word1} ${word2} is ${word3} years old and his hobbies are ${word4[0]} and ${word4[1]}`
         );
       });
     });
